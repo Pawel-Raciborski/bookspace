@@ -1,0 +1,38 @@
+# EditorConfig: https://editorconfig.org
+# Basic formatting shared by all editors (IntelliJ natively, VS Code via the EditorConfig extension).
+
+# Do not look for .editorconfig files in parent directories
+root = true
+
+# Defaults for every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Java: 4 spaces, 120-char guide (IntelliJ uses it as the right margin)
+[*.java]
+indent_size = 4
+max_line_length = 120
+
+# Maven POM and other XML
+[*.xml]
+indent_size = 4
+
+# SQL (Flyway migrations)
+[*.sql]
+indent_size = 4
+
+# Frontend, config and CI files keep the 2-space default:
+# *.js, *.jsx, *.json, *.css, *.html, *.yml, *.yaml, Dockerfile
+
+# Markdown: two trailing spaces mean a line break, so keep them
+[*.md]
+trim_trailing_whitespace = false
+
+# Windows scripts (e.g. mvnw.cmd) must keep CRLF
+[*.{cmd,bat}]
+end_of_line = crlf
